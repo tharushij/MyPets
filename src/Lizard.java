@@ -5,7 +5,12 @@ public class Lizard extends Pet
     public Lizard(String name, String species, int age, double weight) {
         super (name, age, weight);
         this.species = species;
-    } //end method
+    } //end full constructor with calls to super
+
+    public String Speak()
+    {
+        return "hisssss!";
+    } //end method Speak
 
     public String toString() {
         String output = super.toString() + "Species: " + species;

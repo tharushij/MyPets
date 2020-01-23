@@ -8,6 +8,15 @@ public class Dog extends Pet
         this.breed = breed;
     } //end full constructor with call to super
 
+    public String Speak()
+    {
+        if(this.age < 2)
+        {
+
+        } //end if
+        return "Woof";
+    } //end method Speak
+
     public String toString()
     {
         String output = super.toString() + "Breed: " + breed;
