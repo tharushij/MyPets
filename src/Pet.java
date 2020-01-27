@@ -1,9 +1,11 @@
+import java.text.DecimalFormat; //to format the weight in pounds
 public abstract class Pet
 {
     //Instance variables
     protected String name;
     protected int age;
     protected double weight; //kilograms
+    DecimalFormat fmt = new DecimalFormat("#.#"); //create formatting object
 
     //Constructor(s)
     public Pet(String name, int age, double weight)
@@ -38,7 +40,7 @@ public abstract class Pet
     {
         String output = "Name: " + name;
         output += "\nAge: " + age;
-        output += "\nWeight: " + weight;
+        output += "\nWeight: " + weight + " kg " + "(" + fmt.format(AmericanFreedomUnits())+ " in pounds)";
 
         return output;
     } //end method toString which is called in all child classes
