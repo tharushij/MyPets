@@ -4,9 +4,9 @@ public class Bird extends Pet
     private String color;
     private double wingspan; //inches
 
-    public Bird(String name, String species, int age, double weight, String color, double wingspan)
+    public Bird(String name, String species, int age, double weight, String color, double wingspan, String food)
     {
-        super(name, age, weight);
+        super(name, age, weight, food);
         this.color = color;
         this.wingspan = wingspan;
         this.species = species;
@@ -14,8 +14,13 @@ public class Bird extends Pet
 
     public String Speak()
     {
-        return "The universe is a simulation"; 
+        return "The universe is a simulation";
     }
+
+    public int monthlyFeeding()
+    {
+        return 8;
+    } //end method to daetermine number of feedings
 
     public String toString()
     {
